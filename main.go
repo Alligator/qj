@@ -177,6 +177,7 @@ func main() {
   for _, query := range queries {
     fmt.Printf("\x1b[93m%s\x1b[0m\n", query.Name)
     for _, cells := range columns[query.Name] {
+      fmt.Print("  ")
       for idx, cell := range cells {
         formatString := fmt.Sprintf("%%-%ds  ", columnWidths[idx])
         fmt.Printf(formatString, cell)
